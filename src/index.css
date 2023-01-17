@@ -24,7 +24,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-image: linear-gradient(
     to right,
-    rgb(2, 11, 27),
+    rgb(1, 5, 14),
     var(--color-background)
   );
   color: var(--color-light);
@@ -32,31 +32,33 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 8vmin;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 6.5vmin;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 4vmin;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 2.5vmin;
+  font-weight: 300;
+  color: var(--color-secondary)
 }
 
 p {
-  font-size: 16px;
+  font-size: 2vmin;
 }
 
 section {
-  height: 100vh;
+  height: calc(50vh + 25vw);
 }
 
 .button-primary {
-  padding: 0.7rem 1.3rem;
+  padding: 0.7rem 1.5rem;
   color: var(--color-light);
   background-color: var(--color-transparent);
   border-radius: 10rem;
@@ -71,8 +73,18 @@ section {
   border-color: var(--color-transparent);
 }
 
-.container-md {
+.container {
   max-width: 720px;
   margin: auto;
+}
+
+/* MEDIA QUERIES MOBILE */
+
+@media (max-width: 600px)  {
+  .button-primary {
+    padding: 0.5rem 1rem;
+  }
+
+  
 }
 
