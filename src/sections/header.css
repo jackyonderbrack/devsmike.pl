@@ -1,20 +1,27 @@
-#header { 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-image: url('../assets/background-header.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
+#header {
+    display: flex;
 }
-
-.container-md > .col {
+#header > .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
+    align-items: center;
 }
 
-#header p {
-    padding-bottom: 1rem;
+#header .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .row {
+    margin-top: 2rem;
+    display: flex;
+    width: max-content;
+    gap: 2vmin;
+
+}
+
+#header img {
+    width: 60vmin;
 }

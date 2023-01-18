@@ -1,18 +1,26 @@
 import './header.css'
+import HeaderImage from '../assets/background-header-1x1.png'
 
 
 const Header = () => {
   return (
     <section id='header'>
       
-      <div className="container-md">
-        <div className="col">
+      <div className="container">
+
+        <div className="column">
           <h1>devsmike</h1>
-          <p>from plan > to build > to develop</p>
-          <button className='button-primary'><h4>Darmowa wycena</h4></button>
+          <h4>from plan > to build > to develop</h4>
+
+          <div className="row">
+            <button className='button-primary'><p>Darmowa wycena</p></button>
+            <button className='button-primary'><p>Kontakt</p></button>
+          </div>
+          
         </div>
 
-        <div className="col">
+        <div className="column">
+          <img src={HeaderImage} alt="" />
               
         </div>
       </div>

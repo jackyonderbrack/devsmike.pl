@@ -1,0 +1,32 @@
+#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#services .tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vmin;
+}
+
+#services .tab {
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+}
+
+
+@media (max-width: 600px) {
+    
+#services {
+    grid-template-columns: 1fr;
+    height: min-content;
+    gap: 3rem;
+  }
+
+ #services .tabs {
+    justify-content: center;
+ } 
+}
