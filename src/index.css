@@ -12,12 +12,12 @@
 
 :root {
   --color-background: #1f1f38;
-  --color-primary: #38598b;
+  --color-primary: #516179;
   --color-secondary: #a2a8d3;
   --color-light: #e7eaf6;
   --color-dark: #113f67;
   --color-transparent: transparent;
-  --transition: all 400ms ease;
+  --transition: all 600ms ease;
 }
 
 body {
@@ -28,6 +28,8 @@ body {
     var(--color-background)
   );
   color: var(--color-light);
+  max-width: 1440px;
+  margin: auto;
   
 }
 
@@ -53,17 +55,41 @@ p {
   font-size: 2vmin;
 }
 
+a {
+  font-size: 1.5vmin;
+}
+
 section {
-  height: calc(50vh + 25vw);
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+  border-top: 1px solid #a2a8d3;
+  border-bottom: 1px solid #a2a8d3;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2vmin;
 }
 
 .button-primary {
-  padding: 0.7rem 1.5rem;
+  padding: 1vmin 3vmin;
   color: var(--color-light);
   background-color: var(--color-transparent);
   border-radius: 10rem;
   border: 1px solid var(--color-light);
   transition: var(--transition);
+  display: inline-block;
+}
+
+.button-secondary {
+  padding: 1vmin 3vmin;
+  color: var(--color-background);
+  background-color: var(--color-light);
+  border-radius: 10rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  display: inline-block;
+  
 }
 
 .button-primary:hover {
@@ -73,18 +99,73 @@ section {
   border-color: var(--color-transparent);
 }
 
+.button-secondary:hover {
+  cursor: pointer;
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border-color: var(--color-transparent);
+}
+
 .container {
   max-width: 720px;
   margin: auto;
 }
 
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+}
+
+/* ANIMATION EFFECTS */
+
+.reveal-1 {
+  position: relative;
+  opacity: 0;
+  transition: 1200ms all ease;
+  transition-delay: 600ms;
+}
+
+.reveal-2 {
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+
+
 /* MEDIA QUERIES MOBILE */
 
-@media (max-width: 600px)  {
-  .button-primary {
-    padding: 0.5rem 1rem;
+@media (max-width: 900px)  {
+
+  .col {
+    text-align: center;
   }
 
+  .row {
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+  }
   
+  .columns {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
 }
 
